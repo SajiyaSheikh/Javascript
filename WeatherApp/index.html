@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+ <div id="main-container">
+<div class="app-container">
+
+        <!-- App Title -->
+        <h1 class="app-title">Weather Dashboard</h1>
+
+        <!-- Search Section -->
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name..."
+            />
+            <button id="searchBtn" onClick="searchWeather()">Search</button>
+        </div>
+
+        <!-- Weather Card -->
+        <div class="weather-card" id="weatherCard">
+
+            <h2 class="city-name"></h2>
+            <p class="date-time"></p>
+
+            <div class="temperature-section">
+                <h1 class="temperature"></h1>
+                <p class="weather-condition"></p>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span>Humidity</span>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="detail">
+                    <span>Wind</span>
+                    <p id="wind"></p>
+                </div>
+
+                <div class="detail">
+                    <span>Feels Like</span>
+                    <p id="feels"></p>
+                </div>
+
+                <div class="detail">
+                    <span>Pressure</span>
+                    <p id="pressure"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   <div class="embed-map-fixed"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=N&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://funclicker.org" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Fun Clicker</a></div><style>.embed-map-fixed{position:relative;text-align:right;width:600px;height:400px;}.embed-map-container{overflow:hidden;background:none!important;width:600px;height:400px;}.embed-map-frame{width:600px!important;height:400px!important;}</style></div>
+
+   </div>
+ </div>
+</body>
+</html>
