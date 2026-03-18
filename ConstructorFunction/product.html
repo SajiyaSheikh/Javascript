@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <input type="text" name="Product Name" id="name">
+        <input type="number" id="price">
+        <input type="submit" name="Submit" onclick="storeProduct()">
+    </form>
+</body>
+<script>
+    let products_arr=JSON.parse(localStorage.getItem("products"))||[];
+    function Product(name, price) {
+        this.name = name,
+        this.price = price
+    }
+
+    function storeProduct() {
+        event.preventDefault();
+        let form = document.querySelector("#form");
+        let name = form.name.value;
+        let price = form.price.value;
+        let obj = new Product(name, price);
+        products_arr.push(obj);
+        localStorage.setItem("products",JSON.stringify(products_arr));
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //Normally, this depends on how a function is called.
+
+    const person = {
+        name: 'Sajiya',
+        greet: function () {
+            console.log(`Hello ${this.name}`);
+        }
+
+    }
+    //person.greet();
+
+    function greet(age)
+    {
+        console.log(`Hello ${this.name}.My age is ${age}`)
+    }
+
+    const person1={
+        name:'Sajiya'
+    }
+
+    const user={
+        name:'XYZ'
+    }
+
+    //greet.call(person1,26); 
+    greet.apply(user,[26]); // Pass argument as an array
+
+    let resFun=greet.bind(user);  // Bind returns a new function and then exectes
+    resFun(28);
+
+
+
+
+    
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import&Export</title>
+    <style>
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: black;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        #right-nav>a {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script type="module">
+
+    import navbar from "./components/navbar.js"
+
+    document.body.innerHTML = navbar();
+
+    import { add, sub } from "./scripts/math.js"
+    console.log(add(10, 3));
+</script>

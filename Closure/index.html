@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<script>
+    // CLosure is the function that remembers the variable from its outer scope even when the outer scope has finished its execution
+
+    function outer() {
+        let x = 10;
+
+        function inner() {
+            console.log(x);
+        }
+
+        return inner;
+    }
+
+    let myFunction = outer(); // Here outer function execution is completed but still in next line
+    // where we are calling myFunction, x is accessible
+    // Normally x should be destroyed, but JS sees returned function still needs x so it keep it in memory
+    // This concept is called as JS Closure
+    myFunction();
+
+
+    // EXP 2 :
+    function counter() {
+        let count = 0;  // It helps to create private variable which can be accessible only within returned function
+
+        function increaseCount() {
+            while (count < 5) {
+                count++;
+                console.log(count);
+            }
+        }
+
+        return increaseCount;
+    }
+
+    let countFun = counter();
+    countFun();
+
+</script>

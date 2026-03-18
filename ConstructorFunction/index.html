@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+// Constructor Function is special function which is used to create multiple objects using a blueprint.
+// It also helps to initialize an object
+// Always use with new keyword
+
+// Create CF
+// function Person(n,a)
+// {
+//     this.name=n,
+//     this.age=a
+// }
+// let p1=new Person("Sajiya",26);
+// console.log(p1);
+
+
+// Add method
+// function Person(n,a)
+// {
+//    this.name=n,
+//    this.age=a,
+
+//    this.showData=function()
+//    {
+//       console.log(this.name, this.age);
+//    }
+// }
+
+// let p1=new Person("Sajiya",26);
+// p1.showData();
+
+// Create Employee Constructor function whose bonus is 10% of salary
+
+function Employee(id,name,salary,department)
+{
+    this.id=id,
+    this.name=name,
+    this.salary=salary,
+    this.department=department,
+
+    this.getBonus=function()
+    {
+        return (10/this.salary)*100
+    }
+}
+
+let e1=new Employee(100,"Sajiya",50000,"Technical");
+console.log(e1.getBonus());
+
+</script>

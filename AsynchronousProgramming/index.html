@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Programming</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // JS executes the code synchronously (one line at a time)
+    // But there can be some code which takes long time to execute, so at that time JS can't wait until it finishes
+    // so it handover its execution to Browser
+    // Browser provides functionality which makes JS work Asynchronously
+
+    // Methods to work with Asynchronous Programming
+    // 1) setTimeout(callback function, time in ms) -- > executes once after the given time
+    // 2) setInterval(callback functon, time in ms) -- > repeats execution after given time
+    // 3) clearInterval(id) --- > takes interval id as an argumenent
+
+    // Que 1) Print Hello and print World after 3 sec
+    // console.log("Hello");
+    // setTimeout(()=>{
+    //     console.log("World")
+    // },3000);
+
+    // Que 2) Create a timer that prints 1,2,3,4,5 after 1 sec and stops after 5
+    // let i=1;
+    // let id=setInterval(()=>{
+    //     console.log(i);
+    //     i++;
+    //     if(i>5)
+    //     {
+    //       clearInterval(id);
+    //     }
+    // },1000)
+    
+    // Que 3
+
+    // function serveFood()
+    // {
+    //     console.log("Serve Food");
+
+    // }
+    // function checkFood(serveFood){
+
+    //     setTimeout(()=>{
+    //         console.log("Food is Ready...")
+    //         serveFood();
+    //     },2000)
+ 
+    // }
+    // checkFood(serveFood);
+
+
+
+
+ 
+</script>
+</html>

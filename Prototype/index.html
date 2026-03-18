@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // Prototype is like an blueprint from which multiple objects can be created
+    // Prototype is an implementation of Inheritance
+    // Prototype holds the inherited properties
+
+    const obj={
+        name:"Sajiya"
+    }
+
+    let obj2=Object.create(obj);
+    let obj3=Object.create(obj);
+    console.log(obj2); // it will give obj whose prototype is obj
+    console.log(obj2.name); // Sajiya : returns a property value and this concept is called as Inheritance
+    console.log(obj3.name) // Sajiya
+
+    // All the objects which are created from the prototype can access its properties
+    // It gives the ability to reuse the properties which are common to all the objects
+
+    // How to use prototype and inheritance?
+    // There are two ways
+    // 1) Object.create()
+    // 2) COnstructor function
+
+    // 1) Object.create()
+
+    const person={
+         name:'Sajiya',
+         age: 25
+    }
+
+    let p1=Object.create(person);
+    console.log(p1); // Empty Object
+    console.log(p1.age); // 25
+
+
+    // 2) Constructor Function
+    
+    function Person(name,age)
+    {
+        this.name=name;
+        this.age=age;
+
+    }
+
+    Person.prototype.showDetails=function() // This is how we can add functions in the prototype and now that function can be invoked by any objects created from the constructor function
+    {
+        console.log(`Hi My Name is ${this.name}`)
+    }
+
+    Person.prototype.city="Pune";
+ let p2=new Person("Sajiya",26)
+ console.log(p2);
+   p2.showDetails();
+</script>
+</html>
